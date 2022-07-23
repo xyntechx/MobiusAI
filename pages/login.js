@@ -8,12 +8,12 @@ export default function Login() {
     const [password, setPassword] = useState("");
 
     const backerLogin = () => {
-        // console.log(username, password)
+        // check whether all fields have been filled up
         window.location.href = "/backer";
     };
 
     const researcherLogin = () => {
-        // console.log(username, password)
+        // check whether all fields have been filled up
         window.location.href = "/researcher";
     };
 

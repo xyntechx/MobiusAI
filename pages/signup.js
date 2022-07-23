@@ -11,14 +11,14 @@ export default function Signup() {
     const [password2, setPassword2] = useState("");
 
     const backerSignUp = () => {
-        // console.log(firstName, lastName, username, password1, password2);
-        // console.log("password verified:", password1 === password2);
+        // check whether all fields have been filled up
+        // check password1 === password2
         window.location.href = "/backer";
     };
 
     const researcherSignUp = () => {
-        // console.log(firstName, lastName, username, password1, password2);
-        // console.log("password verified:", password1 === password2);
+        // check whether all fields have been filled up
+        // check password1 === password2
         window.location.href = "/researcher";
     };
 
