@@ -1,0 +1,44 @@
+{
+    "users" : [
+        {
+            "name": "Alpha Dodenhoff",
+            "imageSrc": "/Alpha Dodenhoff.png"
+        },
+        {
+            "name": "Migdalia Bulle",
+            "imageSrc": "/Migdalia Bulle.png"
+        },
+        {
+            "name": "Trudie Koepper",
+            "imageSrc": "/Trudie Koepper.png"
+        },
+        {
+            "name": "Marie Sawan",
+            "imageSrc": "/Marie Sawan.png"
+        },
+        {
+            "name": "Janyce Beckham",
+            "imageSrc": "/Janyce Beckham.png"
+        },
+        {
+            "name": "Hector Golla",
+            "imageSrc": "/Hector Golla.png"
+        },
+        {
+            "name": "Domenic Ried",
+            "imageSrc": "/Domenic Ried.png"
+        },
+        {
+            "name": "Colby Istas",
+            "imageSrc": "/Colby Istas.png"
+        },
+        {
+            "name": "Tommy Goh",
+            "imageSrc": "/Tommy Goh.png"
+        },
+        {
+            "name": "Allan Armenteros",
+            "imageSrc": "/Allan Armenteros.png"
+        }
+    ]
+}
