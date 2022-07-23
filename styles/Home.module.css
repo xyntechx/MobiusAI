@@ -23,7 +23,8 @@
     color: #0ea5e9;
 }
 
-.button {
+.button,
+.buttonBlue {
     color: black;
     margin: 0.5rem 0;
     border: black 0.1rem solid;
@@ -35,13 +36,97 @@
     transition: 0.3s;
 }
 
-.button:hover {
+.buttonBlue {
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+.button:hover,
+.buttonBlue:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
+}
+
+.form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formElement {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0.5rem 0;
+}
+
+.formLabel {
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    width: 30%;
+}
+
+.formInput {
+    width: 100%;
+    margin: 0;
+    border: #d9d9d9 0.1rem solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: black;
+}
+
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 1rem;
+}
+
+.guide {
+    color: #6b7280;
+    width: 100%;
+    text-align: right;
+}
+
+.linkUnderlined {
+    color: #0ea5e9;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
+    .title {
+        font-size: 3rem;
+    }
+
     .button {
         width: 80%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .formLabel,
+    .formInput,
+    .buttonBlue {
+        font-size: 0.8rem;
+    }
+
+    .buttonDiv {
+        column-gap: 0.5rem;
     }
 }
