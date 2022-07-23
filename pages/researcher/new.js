@@ -261,6 +261,7 @@ export default function NewCampaign() {
                             >
                                 <Image
                                     src={user.imageSrc}
+                                    alt={user.name + "'s Profile Picture"}
                                     width={50}
                                     height={50}
                                 />
