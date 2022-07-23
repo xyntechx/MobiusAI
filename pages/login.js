@@ -18,7 +18,7 @@ export default function Login() {
     };
 
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>MobiusAI</title>
                 <meta name="description" content="For a dynamic AI ecosystem" />
