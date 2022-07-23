@@ -1,0 +1,59 @@
+.nav {
+    height: fit-content;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    top: 0;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 3;
+}
+
+.name {
+    font-size: 2rem;
+    color: white;
+    margin-left: 3rem;
+}
+
+.navDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+}
+
+.button {
+    border: white solid 0.1rem;
+    color: white;
+    border-radius: 0.5rem;
+    margin-right: 3rem;
+    font-size: 1rem;
+    background-color: black;
+    padding: 0.2rem 1rem;
+    transition: 0.3s;
+}
+
+.button:hover,
+.button:focus {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.blue {
+    color: #0ea5e9;
+}
+
+@media (max-width: 600px) {
+    .name {
+        margin-left: 1rem;
+    }
+
+    .navDiv {
+        margin-right: -2rem;
+    }
+}
