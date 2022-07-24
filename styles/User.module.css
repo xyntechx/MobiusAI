@@ -1,5 +1,6 @@
 .main,
-.mainCenter {
+.mainCenter,
+.mainError {
     min-height: 100vh;
     padding: 4rem 2rem;
     flex: 1;
@@ -9,12 +10,18 @@
     align-items: flex-start;
 }
 
-.mainCenter {
+.mainCenter,
+.mainError {
     align-items: center;
 }
 
+.mainError {
+    justify-content: center;
+}
+
 .title,
-.titleNewCampaign {
+.titleNewCampaign,
+.titleError {
     margin: 0;
     margin-top: 4rem;
     margin-bottom: 1rem;
@@ -26,6 +33,11 @@
 
 .titleNewCampaign {
     width: 70%;
+}
+
+.titleError {
+    width: 100%;
+    text-align: center;
 }
 
 .container,
@@ -233,8 +245,13 @@
     color: #0ea5e9;
 }
 
-.username {
+.username,
+.usernameSelected {
     margin: 0.5rem;
+}
+
+.usernameSelected {
+    color: #0ea5e9;
 }
 
 @media (max-width: 600px) {
