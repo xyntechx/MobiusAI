@@ -1,20 +1,34 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Login() {
-    const [username, setUsername] = useState(""); // must be unique
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
     const backerLogin = () => {
-        // check whether all fields have been filled up
-        window.location.href = "/backer";
+        const USERNAME = "the_backer";
+        const PASSWORD = "b123456";
+
+        if (username === USERNAME && password === PASSWORD) {
+            localStorage.setItem("usertype", "backer");
+            window.location.href = "/backer";
+        } else {
+            alert("User not found!");
+        }
     };
 
     const researcherLogin = () => {
-        // check whether all fields have been filled up
-        window.location.href = "/researcher";
+        const USERNAME = "the_researcher";
+        const PASSWORD = "r123456";
+
+        if (username === USERNAME && password === PASSWORD) {
+            localStorage.setItem("usertype", "researcher");
+            window.location.href = "/researcher";
+        } else {
+            alert("User not found!");
+        }
     };
 
     return (
