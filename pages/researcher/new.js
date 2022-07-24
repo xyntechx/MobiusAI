@@ -23,7 +23,7 @@ export default function NewCampaign() {
     const [proSelected, setProSelected] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-    const [teamMembers, setTeamMembers] = useState([]);
+    const [teamMembers, setTeamMembers] = useState(["The Mobius"]);
     const [raised, setRaised] = useState(0); // remains at 0 during create
     const [message, setMessage] = useState(""); // still empty unless campaign is Completed
     const [backerAmt, setBackerAmt] = useState(0); // only for backers (i.e. the plan they choose)

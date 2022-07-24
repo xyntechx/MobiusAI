@@ -1,6 +1,10 @@
 {
     "users" : [
         {
+            "name": "The Mobius",
+            "imageSrc": "/users/me.png"
+        },
+        {
             "name": "Alpha Dodenhoff",
             "imageSrc": "/users/Alpha Dodenhoff.png"
         },
