@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Signup() {
     const [firstName, setFirstName] = useState("");
@@ -11,15 +11,29 @@ export default function Signup() {
     const [password2, setPassword2] = useState("");
 
     const backerSignUp = () => {
-        // check whether all fields have been filled up
-        // check password1 === password2
-        window.location.href = "/backer";
+        if (firstName && lastName && username && password1 && password2) {
+            if (password1 === password2) {
+                localStorage.setItem("usertype", "backer");
+                window.location.href = "/backer";
+            } else {
+                alert("Your passwords don't match!");
+            }
+        } else {
+            alert("Please fill up all fields before signing up!");
+        }
     };
 
     const researcherSignUp = () => {
-        // check whether all fields have been filled up
-        // check password1 === password2
-        window.location.href = "/researcher";
+        if (firstName && lastName && username && password1 && password2) {
+            if (password1 === password2) {
+                localStorage.setItem("usertype", "researcher");
+                window.location.href = "/researcher";
+            } else {
+                alert("Your passwords don't match!");
+            }
+        } else {
+            alert("Please fill up all fields before signing up!");
+        }
     };
 
     return (
