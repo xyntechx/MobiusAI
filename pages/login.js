@@ -40,9 +40,11 @@ export default function Login() {
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>Log In</h1>
+                <h1 className={styles.title}>
+                    Mobius<span className={styles.blue}>AI</span>
+                </h1>
                 <br />
-                <div className={styles.form}>
+                <div className={styles.formLogin}>
                     <div className={styles.formElement}>
                         <p className={styles.formLabel}>Username</p>
                         <input

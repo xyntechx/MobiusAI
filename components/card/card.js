@@ -19,7 +19,7 @@ export default function Card({ name, raised, goal, progress, imageSrc }) {
                         style={{
                             marginBottom: "0.5rem",
                             color: "#374151",
-                            width: "50%",
+                            width: "90%",
                         }}
                     >
                         ${raised} out of ${goal} pledged
@@ -28,7 +28,7 @@ export default function Card({ name, raised, goal, progress, imageSrc }) {
                         style={{
                             marginBottom: "0.5rem",
                             color: "#374151",
-                            width: "50%",
+                            width: "10%",
                             textAlign: "right",
                         }}
                     >

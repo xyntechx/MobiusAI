@@ -14,7 +14,7 @@
 .card:hover,
 .card:focus {
     cursor: pointer;
-    border-color: black;
+    border-color: #0ea5e9;
     box-shadow: 0 20px 35px 0 rgb(0 0 0 / 10%);
 }
 
@@ -28,8 +28,8 @@
 }
 
 .newcard:hover {
-    border-color: black;
-    color: black;
+    background-color: #0ea5e9;
+    color: white;
 }
 
 .image {

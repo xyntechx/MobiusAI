@@ -360,8 +360,8 @@ export default function NewCampaign() {
                                     <Image
                                         src={user.imageSrc}
                                         alt={user.name + "'s Profile Picture"}
-                                        width={50}
-                                        height={50}
+                                        width={30}
+                                        height={30}
                                     />
                                     <p
                                         className={
@@ -372,6 +372,25 @@ export default function NewCampaign() {
                                     >
                                         {user.name}
                                     </p>
+                                </div>
+                            ))}
+                            {teamMembers.map((name, i) => (
+                                <div
+                                    key={i}
+                                    className={styles.profileSelected}
+                                    style={{ border: "none" }}
+                                >
+                                    <Image
+                                        alt={name + "'s Profile Picture"}
+                                        width={30}
+                                        height={30}
+                                        src={
+                                            name !== "The Mobius"
+                                                ? "/users/" + name + ".png"
+                                                : "/users/me.png"
+                                        }
+                                    />
+                                    <p className={styles.username}>{name}</p>
                                 </div>
                             ))}
                         </div>

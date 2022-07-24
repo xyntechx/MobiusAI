@@ -75,15 +75,14 @@
     font-size: 1rem;
     text-align: center;
     transition: 0.3s;
-    background-color: #0ea5e9;
-    color: white;
-    border: none;
+    border: #0ea5e9 0.1rem solid;
+    color: #0ea5e9;
     width: fit-content;
     border-radius: 0.5rem;
 }
 
 .button:hover {
-    background-color: black;
+    background-color: #0ea5e9;
     color: white;
     cursor: pointer;
 }
@@ -147,9 +146,9 @@
     font-size: 1rem;
     text-align: center;
     transition: 0.3s;
-    background-color: #0ea5e9;
-    color: white;
-    border: none;
+    border: #0ea5e9 0.1rem solid;
+    background-color: white;
+    color: #0ea5e9;
     width: fit-content;
     border-radius: 0.5rem;
 }
@@ -223,17 +222,16 @@
 .buttonBlue:hover,
 .selectButton:hover,
 .selectedButton {
-    background-color: black;
+    background-color: #0ea5e9;
     color: white;
     cursor: pointer;
-    border-color: black;
 }
 
 .buttonText {
     margin: 0;
 }
 
-.profile {
+.profile, .profileSelected {
     display: flex;
     align-items: center;
     justify-content: flex-start;

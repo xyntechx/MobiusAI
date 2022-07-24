@@ -45,47 +45,52 @@ export default function Researcher() {
             });
     }, []);
 
-    return (
-        <div>
-            <Head>
-                <title>MobiusAI</title>
-                <meta name="description" content="For a dynamic AI ecosystem" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+    if (campaigns) {
+        return (
+            <div>
+                <Head>
+                    <title>MobiusAI</title>
+                    <meta
+                        name="description"
+                        content="For a dynamic AI ecosystem"
+                    />
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
 
-            <Topnav />
+                <Topnav />
 
-            {usertype === "researcher" ? (
-                <main className={styles.main}>
-                    <div className={styles.titleContainer}>
-                        <h1 className={styles.title}>My Campaigns</h1>
-                        <div className={styles.buttonContainer}>
-                            <Link href="/researcher/new">
-                                <a className={styles.button}>New</a>
-                            </Link>
+                {usertype === "researcher" ? (
+                    <main className={styles.main}>
+                        <div className={styles.titleContainer}>
+                            <h1 className={styles.title}>My Campaigns</h1>
+                            <div className={styles.buttonContainer}>
+                                <Link href="/researcher/new">
+                                    <a className={styles.button}>New</a>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.container}>
-                        {campaigns.map((campaign, i) => (
-                            <Card
-                                key={i}
-                                name={campaign.name}
-                                raised={campaign.raised}
-                                goal={campaign.goal}
-                                progress={campaign.progress}
-                                imageSrc={campaign.imageSrc}
-                            />
-                        ))}
-                        <NewCard />
-                    </div>
-                </main>
-            ) : (
-                <main className={styles.mainError}>
-                    <h1 className={styles.titleError}>
-                        Oops! This page is only for Researchers :p
-                    </h1>
-                </main>
-            )}
-        </div>
-    );
+                        <div className={styles.container}>
+                            {campaigns.map((campaign, i) => (
+                                <Card
+                                    key={i}
+                                    name={campaign.name}
+                                    raised={campaign.raised}
+                                    goal={campaign.goal}
+                                    progress={campaign.progress}
+                                    imageSrc={campaign.imageSrc}
+                                />
+                            ))}
+                            <NewCard />
+                        </div>
+                    </main>
+                ) : (
+                    <main className={styles.mainError}>
+                        <h1 className={styles.titleError}>
+                            Oops! This page is only for Researchers :p
+                        </h1>
+                    </main>
+                )}
+            </div>
+        );
+    }
 }

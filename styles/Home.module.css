@@ -33,26 +33,36 @@
 }
 
 .buttonBlue {
-    background-color: #0ea5e9;
-    color: white;
-    border: none;
+    border: #0ea5e9 0.1rem solid;
+    color: #0ea5e9;
+    background-color: white;
     width: fit-content;
     border-radius: 0.5rem;
 }
 
-.button:hover,
-.buttonBlue:hover {
+.button:hover {
     background-color: black;
     color: white;
     cursor: pointer;
 }
 
-.form {
+.buttonBlue:hover {
+    background-color: #0ea5e9;
+    color: white;
+    cursor: pointer;
+}
+
+.form,
+.formLogin {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.formLogin {
+    width: 40%;
 }
 
 .formElement {
@@ -112,7 +122,8 @@
         width: 80%;
     }
 
-    .form {
+    .form,
+    .formLogin {
         width: 100%;
     }
 

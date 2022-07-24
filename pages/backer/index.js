@@ -43,39 +43,44 @@ export default function Backer() {
             });
     }, []);
 
-    return (
-        <div>
-            <Head>
-                <title>MobiusAI</title>
-                <meta name="description" content="For a dynamic AI ecosystem" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+    if (campaigns) {
+        return (
+            <div>
+                <Head>
+                    <title>MobiusAI</title>
+                    <meta
+                        name="description"
+                        content="For a dynamic AI ecosystem"
+                    />
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
 
-            <Topnav />
+                <Topnav />
 
-            {usertype === "backer" ? (
-                <main className={styles.main}>
-                    <h1 className={styles.title}>Active Campaigns</h1>
-                    <div className={styles.container}>
-                        {campaigns.map((campaign, i) => (
-                            <Card
-                                key={i}
-                                name={campaign.name}
-                                raised={campaign.raised}
-                                goal={campaign.goal}
-                                progress={campaign.progress}
-                                imageSrc={campaign.imageSrc}
-                            />
-                        ))}
-                    </div>
-                </main>
-            ) : (
-                <main className={styles.mainError}>
-                    <h1 className={styles.titleError}>
-                        Oops! This page is only for Backers :p
-                    </h1>
-                </main>
-            )}
-        </div>
-    );
+                {usertype === "backer" ? (
+                    <main className={styles.main}>
+                        <h1 className={styles.title}>Active Campaigns</h1>
+                        <div className={styles.container}>
+                            {campaigns.map((campaign, i) => (
+                                <Card
+                                    key={i}
+                                    name={campaign.name}
+                                    raised={campaign.raised}
+                                    goal={campaign.goal}
+                                    progress={campaign.progress}
+                                    imageSrc={campaign.imageSrc}
+                                />
+                            ))}
+                        </div>
+                    </main>
+                ) : (
+                    <main className={styles.mainError}>
+                        <h1 className={styles.titleError}>
+                            Oops! This page is only for Backers :p
+                        </h1>
+                    </main>
+                )}
+            </div>
+        );
+    }
 }

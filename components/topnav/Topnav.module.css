@@ -3,8 +3,6 @@
     width: 100vw;
     background-color: black;
     position: fixed;
-    padding-left: 1rem;
-    padding-right: 1rem;
     top: 0;
     vertical-align: middle;
     display: flex;
@@ -16,7 +14,7 @@
 .name {
     font-size: 2rem;
     color: white;
-    margin-left: 3rem;
+    margin-left: 2rem;
     cursor: pointer;
 }
 
@@ -31,7 +29,7 @@
     border: white solid 0.1rem;
     color: white;
     border-radius: 0.5rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
     font-size: 1rem;
     background-color: black;
     padding: 0.2rem 1rem;

@@ -97,15 +97,15 @@
     font-size: 1rem;
     text-align: center;
     transition: 0.3s;
-    background-color: #0ea5e9;
-    color: white;
-    border: none;
+    background-color: white;
+    color: #0ea5e9;
+    border: #0ea5e9 0.1rem solid;
     width: fit-content;
     border-radius: 0.5rem;
 }
 
 .buttonBlue:hover {
-    background-color: black;
+    background-color: #0ea5e9;
     color: white;
     cursor: pointer;
 }
@@ -171,10 +171,9 @@
 }
 
 .selectButton:hover {
-    background-color: black;
+    background-color: #0ea5e9;
     color: white;
     cursor: pointer;
-    border-color: black;
 }
 
 .skeletonProgress {
