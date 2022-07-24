@@ -1,7 +1,7 @@
 # MobiusAI
 > For a dynamic AI ecosystem
 
-MobiusAI enables researchers to launch campaigns for backers (companies and independent developers) to pledge money towards in order to fund the development of open-source models. This promotes the continuous improvement of open-source models, preventing a stagnant AI ecosystem polluted by outdated pre-trained models.
+[MobiusAI](https://themobius.ai/) enables researchers to launch campaigns for backers (companies and independent developers) to pledge money towards in order to fund the development of open-source models. This promotes the continuous improvement of open-source models, preventing a stagnant AI ecosystem polluted by outdated pre-trained models.
 
 ## 🔨 Usage
 To run the project, enter the following commands into your terminal:
