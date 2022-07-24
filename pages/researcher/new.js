@@ -72,7 +72,7 @@ export default function NewCampaign() {
         if (basic_amt) {
             plans.push({
                 name: "Basic",
-                cost: basic_amt,
+                cost: Number(basic_amt),
                 description: basic_desc,
             });
         }
@@ -80,7 +80,7 @@ export default function NewCampaign() {
         if (premium_amt) {
             plans.push({
                 name: "Premium",
-                cost: premium_amt,
+                cost: Number(premium_amt),
                 description: premium_desc,
             });
         }
@@ -88,28 +88,10 @@ export default function NewCampaign() {
         if (pro_amt) {
             plans.push({
                 name: "Pro",
-                cost: pro_amt,
+                cost: Number(pro_amt),
                 description: pro_desc,
             });
         }
-
-        console.log(
-            name,
-            description,
-            benefits,
-            fund_usage,
-            basic_amt,
-            basic_desc,
-            premium_amt,
-            premium_desc,
-            pro_amt,
-            pro_desc,
-            goal,
-            raised,
-            messsage,
-            backer_amt,
-            team
-        );
 
         if (name && description && benefits && fund_usage && plans && goal) {
             axios
@@ -360,9 +342,20 @@ export default function NewCampaign() {
                                 <div
                                     key={i}
                                     className={styles.profile}
-                                    onClick={() =>
-                                        setTeamMembers((arr) => [...arr, user])
-                                    }
+                                    onClick={() => {
+                                        if (teamMembers.includes(user.name)) {
+                                            setTeamMembers(
+                                                teamMembers.filter(
+                                                    (name) => name !== user.name
+                                                )
+                                            );
+                                        } else {
+                                            setTeamMembers((arr) => [
+                                                ...arr,
+                                                user.name,
+                                            ]);
+                                        }
+                                    }}
                                 >
                                     <Image
                                         src={user.imageSrc}
@@ -372,7 +365,7 @@ export default function NewCampaign() {
                                     />
                                     <p
                                         className={
-                                            teamMembers.includes(user)
+                                            teamMembers.includes(user.name)
                                                 ? styles.usernameSelected
                                                 : styles.username
                                         }
