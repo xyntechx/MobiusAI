@@ -3,7 +3,7 @@ import styles from "../topnav/Topnav.module.css";
 
 export default function Topnav() {
     const logout = () => {
-        console.log("logout");
+        localStorage.clear();
         window.location.href = "/";
     };
 
