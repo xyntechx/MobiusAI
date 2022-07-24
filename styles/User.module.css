@@ -191,6 +191,10 @@
     font-size: 1rem;
     font-weight: bold;
     text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .amtInput {
@@ -198,6 +202,7 @@
     border-bottom: #d9d9d9 0.1rem solid;
     font-weight: bold;
     font-size: 1rem;
+    width: 8rem;
 }
 
 .selectButton,
