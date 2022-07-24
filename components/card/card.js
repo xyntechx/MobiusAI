@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../card/Card.module.css";
-import { useState, useEffect } from "react";
 
-export default function Card({ name, imageSrc }) {
+export default function Card({ name, raised, goal, progress, imageSrc }) {
     return (
         <Link href={"/campaign/" + name}>
             <div className={styles.card}>
@@ -15,7 +14,33 @@ export default function Card({ name, imageSrc }) {
                     />
                 </div>
                 <p className={styles.name}>{name}</p>
-                {/* TODO: Progress bar */}
+                <div className={styles.progress}>
+                    <p
+                        style={{
+                            marginBottom: "0.5rem",
+                            color: "#374151",
+                            width: "50%",
+                        }}
+                    >
+                        ${raised} out of ${goal} pledged
+                    </p>
+                    <p
+                        style={{
+                            marginBottom: "0.5rem",
+                            color: "#374151",
+                            width: "50%",
+                            textAlign: "right",
+                        }}
+                    >
+                        {progress}
+                    </p>
+                </div>
+                <div className={styles.skeletonProgress}>
+                    <div
+                        className={styles.fillProgress}
+                        style={{ width: progress }}
+                    ></div>
+                </div>
             </div>
         </Link>
     );
